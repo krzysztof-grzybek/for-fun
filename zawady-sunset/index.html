@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pixel Drift</title>
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background: #000;
+      }
+
+      canvas {
+        display: block;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        image-rendering: pixelated;
+      }
+
+      #music-toggle {
+        position: fixed;
+        right: 1rem;
+        bottom: 1rem;
+        z-index: 1;
+        padding: 0.65rem 0.9rem;
+        border: 1px solid rgb(255 220 190 / 55%);
+        border-radius: 0.25rem;
+        background: rgb(20 12 24 / 78%);
+        color: #ffe2d0;
+        font: 14px/1.2 monospace;
+        cursor: pointer;
+      }
+
+      #music-toggle:focus-visible {
+        outline: 2px solid #ffe2d0;
+        outline-offset: 3px;
+      }
+    </style>
+    <script src="./index.js" defer></script>
+  </head>
+  <body>
+    <canvas id="photo" aria-label="A photo with gently shifting pixels"></canvas>
+    <button id="music-toggle" type="button" aria-pressed="false">Start melody</button>
+  </body>
+</html>
